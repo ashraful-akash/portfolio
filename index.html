@@ -7,18 +7,8 @@
   <link rel="stylesheet" href="assets/style.css">
 </head>
 
-<script>
-  function showSection(sectionId) {
-    const sections = document.querySelectorAll('.section');
-    sections.forEach(section => {
-      section.classList.remove('active');
-    });
-
-    document.getElementById(sectionId).classList.add('active');
-  }
-</script>  
-  
 <body>
+
 <!-- TOP NAVIGATION -->
 <header class="top-nav">
   <div class="nav-name">Md Ashraful Hossen Akash</div>
@@ -30,6 +20,7 @@
     <button onclick="showSection('awards')">Awards & Certificates</button>
   </nav>
 </header>
+
 <div class="container">
 
   <!-- LEFT STATIC SIDEBAR -->
@@ -92,5 +83,16 @@
   </main>
 </div>
 
+<!-- SCRIPT AT THE END (BEST PRACTICE) -->
+<script>
+  function showSection(sectionId) {
+    const sections = document.querySelectorAll('.section');
+    sections.forEach(section => {
+      section.classList.remove('active');
+    });
+    document.getElementById(sectionId).classList.add('active');
+  }
+</script>
 
+</body>
 </html>
