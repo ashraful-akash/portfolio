@@ -1,117 +1,94 @@
-* {
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
-  font-family: 'Cormorant Garamond', serif;
-  background: #f9fafb;
-  color: #1f2933;
+  font-family: Georgia, serif;
+  color: #222;
 }
 
+/* Top navigation */
+.top-nav {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 12px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.top-nav nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
+
+.top-nav nav a:hover {
+  text-decoration: underline;
+}
+
+/* Layout */
 .container {
   display: grid;
-  grid-template-columns: 280px 1fr;
-  min-height: 100vh;
+  grid-template-columns: 260px 1fr;
+  max-width: 1200px;
+  margin: auto;
 }
 
 /* Sidebar */
 .sidebar {
-  background: #ffffff;
-  padding: 40px 25px;
-  border-right: 1px solid #e5e7eb;
-  text-align: center;
+  padding: 30px 20px;
   position: sticky;
-  top: 0;
-  height: 100vh;
+  top: 70px;
+  height: fit-content;
 }
 
 .profile-pic {
-  width: 130px;
-  height: 130px;
+  width: 150px;
   border-radius: 50%;
-  object-fit: cover;
   margin-bottom: 15px;
-}
-
-.sidebar h1 {
-  font-size: 1.6rem;
-  margin: 10px 0;
 }
 
 .subtitle {
-  font-size: 0.95rem;
   color: #555;
 }
 
-.links a {
-  display: block;
-  margin: 8px 0;
-  text-decoration: none;
-  color: #2563eb;
-  font-weight: 600;
+.contact {
+  list-style: none;
+  padding: 0;
 }
 
-/* Main Content */
+.contact li {
+  margin: 8px 0;
+}
+
+/* Content */
 .content {
-  padding: 50px;
-  max-width: 900px;
+  padding: 40px;
 }
 
 section {
-  margin-bottom: 45px;
+  margin-bottom: 60px;
 }
 
 h2 {
-  font-size: 1.4rem;
-  margin-bottom: 15px;
-  border-bottom: 2px solid #e5e7eb;
-  padding-bottom: 5px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 6px;
 }
 
-.card {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 15px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
 }
 
-.card h3 {
-  margin-top: 0;
-}
-
-.meta {
-  font-size: 0.85rem;
-  color: #6b7280;
-}
-
-.card a {
-  text-decoration: none;
-  color: #2563eb;
-  font-weight: 600;
-}
-
-footer {
-  text-align: center;
-  color: #6b7280;
-  margin-top: 60px;
-}
-
-/* Mobile Responsive */
+/* Mobile */
 @media (max-width: 900px) {
   .container {
     grid-template-columns: 1fr;
   }
-
   .sidebar {
     position: relative;
-    height: auto;
-    border-right: none;
-    border-bottom: 1px solid #e5e7eb;
-  }
-
-  .content {
-    padding: 30px;
+    top: 0;
   }
 }
