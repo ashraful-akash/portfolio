@@ -186,6 +186,10 @@ html {
   line-height: 1.6;
   color: #111827;
 }
+.nav-btn.active {
+  border-bottom: 2px solid #2563eb;
+  font-weight: 600;
+}
 
   
 }
