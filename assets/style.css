@@ -99,4 +99,59 @@ html {
     position: relative;
     top: 0;
   }
+
+  .sidebar {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.profile-pic {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.name {
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+}
+
+.role {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.sidebar-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.sidebar-links li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+  font-size: 0.95rem;
+}
+
+.sidebar-links a {
+  text-decoration: none;
+  color: #000;
+}
+
+.sidebar-links a:hover {
+  text-decoration: underline;
+}
+
+.icon {
+  width: 22px;
+  text-align: center;
+  font-weight: bold;
+}
+
 }
