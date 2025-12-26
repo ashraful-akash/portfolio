@@ -6,8 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="assets/style.css">
 </head>
-<body>
 
+<script>
+  function showSection(sectionId) {
+    const sections = document.querySelectorAll('.section');
+    sections.forEach(section => {
+      section.classList.remove('active');
+    });
+
+    document.getElementById(sectionId).classList.add('active');
+  }
+</script>  
+  
+<body>
 <!-- TOP NAVIGATION -->
 <header class="top-nav">
   <div class="nav-name">Md Ashraful Hossen Akash</div>
