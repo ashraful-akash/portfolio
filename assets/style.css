@@ -45,11 +45,17 @@ body {
 }
 
 /* Sidebar */
-.sidebar {
-  padding: 30px 20px;
-  position: sticky;
-  top: 70px;
-  height: fit-content;
+.sidebar-links li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+  font-size: 0.95rem;
+}
+
+.sidebar-links i {
+  width: 18px;
+  text-align: center;
 }
 
 .profile-pic {
