@@ -154,4 +154,38 @@ html {
   font-weight: bold;
 }
 
+.pub-item {
+  margin-bottom: 40px;
+}
+
+.pub-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 6px;
+}
+
+.pub-authors {
+  font-size: 0.95rem;
+  color: #374151;
+  margin-bottom: 4px;
+}
+
+.pub-venue {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.pub-venue.accepted {
+  color: #15803d; /* academic green */
+  font-style: italic;
+}
+
+.pub-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #111827;
+}
+
+  
 }
