@@ -1,55 +1,117 @@
-.profile-pic {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid #eee;
+* {
+  box-sizing: border-box;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  max-width: 900px;
-  margin: auto;
-  padding: 20px;
-  line-height: 1.6;
-  color: #222;
+  margin: 0;
+  font-family: 'Cormorant Garamond', serif;
+  background: #f9fafb;
+  color: #1f2933;
 }
 
-.hero {
+.container {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  background: #ffffff;
+  padding: 40px 25px;
+  border-right: 1px solid #e5e7eb;
   text-align: center;
-  margin-bottom: 50px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
 }
 
-.hero h1 {
-  font-size: 2.5em;
+.profile-pic {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
 }
 
-.hero p {
-  font-size: 1.2em;
+.sidebar h1 {
+  font-size: 1.6rem;
+  margin: 10px 0;
+}
+
+.subtitle {
+  font-size: 0.95rem;
   color: #555;
 }
 
 .links a {
-  margin: 0 10px;
+  display: block;
+  margin: 8px 0;
   text-decoration: none;
-  color: #0066cc;
+  color: #2563eb;
+  font-weight: 600;
+}
+
+/* Main Content */
+.content {
+  padding: 50px;
+  max-width: 900px;
 }
 
 section {
-  margin-bottom: 40px;
+  margin-bottom: 45px;
 }
 
 h2 {
-  border-bottom: 2px solid #eee;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #e5e7eb;
   padding-bottom: 5px;
 }
 
-ul {
-  padding-left: 20px;
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.meta {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.card a {
+  text-decoration: none;
+  color: #2563eb;
+  font-weight: 600;
 }
 
 footer {
   text-align: center;
-  color: #777;
-  margin-top: 50px;
+  color: #6b7280;
+  margin-top: 60px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: relative;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .content {
+    padding: 30px;
+  }
 }
