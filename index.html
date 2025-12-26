@@ -12,89 +12,74 @@
 <header class="top-nav">
   <div class="nav-name">Md Ashraful Hossen Akash</div>
   <nav>
-    <a href="#publications">Publications</a>
-    <a href="#projects">Projects</a>
-    <a href="#experience">Experience</a>
-    <a href="#teaching">Teaching & Services</a>
-    <a href="#awards">Awards</a>
-    <a href="#cv">CV</a>
+    <button onclick="showSection('home')">Home</button>
+    <button onclick="showSection('publications')">Publications</button>
+    <button onclick="showSection('projects')">Projects</button>
+    <button onclick="showSection('experience')">Experience</button>
+    <button onclick="showSection('awards')">Awards & Certificates</button>
   </nav>
 </header>
-
 <div class="container">
 
-  <!-- LEFT SIDEBAR -->
+  <!-- LEFT STATIC SIDEBAR -->
   <aside class="sidebar">
     <img src="assets/profile.jpg" class="profile-pic">
-
-    <h2>Md Ashraful Hossen Akash</h2>
-    <p class="subtitle">Student · Researcher</p>
-
-    <ul class="contact">
-      <li>📍 Rajshahi, Bangladesh</li>
-      <li><a href="mailto:ashraful.hossen.akash@email.com">Email</a></li>
-      <li><a href="#">LinkedIn</a></li>
-      <li><a href="#">GitHub</a></li>
-      <li><a href="#">Google Scholar</a></li>
-    </ul>
+    <h2>Ashraful Akash</h2>
+    <p>Student · Researcher</p>
   </aside>
 
-  <!-- RIGHT CONTENT -->
+  <!-- RIGHT DYNAMIC CONTENT -->
   <main class="content">
 
-    <section id="about">
+    <!-- HOME -->
+    <div id="home" class="section active">
       <h2>About Me</h2>
       <p>
-        I am a Computer Science & Engineering undergraduate at RUET with research
-        interests in Artificial Intelligence and Natural Language Processing.
+        I am a CSE undergraduate at RUET with research interests in AI & NLP.
       </p>
-    </section>
 
-    <section id="publications">
+      <h2>Education</h2>
+      <p>
+        BSc in CSE, RUET<br>
+        CGPA: 3.10
+      </p>
+    </div>
+
+    <!-- PUBLICATIONS -->
+    <div id="publications" class="section">
       <h2>Publications</h2>
       <ul>
-        <li><strong>Memory-Efficient Deep Learning Architectures</strong>, IEEE 2025</li>
-        <li><strong>Transformer-Based Multi-Label Disease Prediction</strong>, IEEE 2025</li>
+        <li>Memory-Efficient DL for Water Body Segmentation (IEEE 2025)</li>
+        <li>Transformer-Based Disease Prediction (IEEE 2025)</li>
       </ul>
-    </section>
+    </div>
 
-    <section id="projects">
+    <!-- PROJECTS -->
+    <div id="projects" class="section">
       <h2>Projects</h2>
-      <ul>
-        <li><strong>AlzDetect-AI</strong> – Alzheimer’s detection from MRI</li>
-      </ul>
-    </section>
+      <p><strong>AlzDetect-AI</strong> – Alzheimer detection from MRI</p>
+    </div>
 
-    <section id="experience">
+    <!-- EXPERIENCE -->
+    <div id="experience" class="section">
       <h2>Experience</h2>
       <ul>
         <li>Software Intern – Code Studio</li>
         <li>Research Assistant – NLP</li>
       </ul>
-    </section>
+    </div>
 
-    <section id="teaching">
-      <h2>Teaching & Services</h2>
-      <ul>
-        <li>Q&A Instructor – Udvash</li>
-        <li>Mentor – IEEE Conference Papers</li>
-      </ul>
-    </section>
-
-    <section id="awards">
-      <h2>Awards</h2>
+    <!-- AWARDS -->
+    <div id="awards" class="section">
+      <h2>Awards & Certificates</h2>
       <ul>
         <li>IEEE Conference Author</li>
+        <li>EDGE Training Program</li>
       </ul>
-    </section>
-
-    <section id="cv">
-      <h2>Curriculum Vitae</h2>
-      <a href="assets/CV_Ashraful.pdf" target="_blank">Download CV (PDF)</a>
-    </section>
+    </div>
 
   </main>
 </div>
 
-</body>
+
 </html>
