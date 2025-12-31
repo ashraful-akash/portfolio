@@ -288,7 +288,14 @@ strong {
   font-weight: 600;
 }
 
-
+/* Hamburger button */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
 
 
 
@@ -455,16 +462,31 @@ a:hover {
     font-size: 1.2rem;
     white-space: nowrap;
   }
+  
+  .menu-toggle {
+    display: block;
+  }
 
   .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #fff;
+    border-top: 1px solid #e5e7eb;
+    padding: 10px 0;
+  }
+
+  .nav-links.show {
+    display: flex;
   }
 
   .nav-btn {
-    font-size: 0.95rem;
+    padding: 10px 0;
+    font-size: 1rem;
   }
 
+  .nav-btn.active::after {
+    display: none; /* no underline in dropdown */
+  }
   
 }
