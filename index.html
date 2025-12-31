@@ -450,6 +450,20 @@
     const hash = window.location.hash.replace('#', '');
     if (hash) showSection(hash);
   });
+  function toggleMenu() {
+    document.getElementById("mobileMenu").classList.toggle("show");
+  }
+
+  function navigate(sectionId, btn) {
+    window.location.hash = sectionId;
+    showSection(sectionId);
+
+    // Close menu on mobile after click
+    const menu = document.getElementById("mobileMenu");
+    if (menu.classList.contains("show")) {
+      menu.classList.remove("show");
+    }
+  }
 </script>
 
 
