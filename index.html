@@ -417,25 +417,32 @@
 <!-- SCRIPT AT THE END (BEST PRACTICE) -->
 <script>
   function showSection(sectionId) {
-    // Show correct section
-    document.querySelectorAll('.section').forEach(sec =>
-      sec.classList.remove('active')
-    );
+  document.querySelectorAll('.section').forEach(sec =>
+    sec.classList.remove('active')
+  );
 
-    const section = document.getElementById(sectionId);
-    if (section) section.classList.add('active');
+  document.getElementById(sectionId)?.classList.add('active');
 
-    // Highlight nav button
-    document.querySelectorAll('.nav-btn').forEach(btn =>
-      btn.classList.remove('active')
-    );
+  document.querySelectorAll('.nav-btn').forEach(btn =>
+    btn.classList.remove('active')
+  );
 
-    document
-      .querySelector(`.nav-btn[data-target="${sectionId}"]`)
-      ?.classList.add('active');
+  document
+    .querySelector(`.nav-btn[data-target="${sectionId}"]`)
+    ?.classList.add('active');
 
-    // FORCE page to stay at top (prevents jump)
-    window.scrollTo({ top: 0, behavior: 'instant' });
+  // Close mobile menu
+  document.getElementById("mobileMenu")?.classList.remove("show");
+
+  // Prevent jump
+  window.scrollTo({ top: 0, behavior: 'instant' });
+}
+
+</script>
+    
+<script>
+  function toggleMenu() {
+    document.getElementById("mobileMenu").classList.toggle("show");
   }
 </script>
 
