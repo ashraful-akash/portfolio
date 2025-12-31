@@ -36,6 +36,12 @@ body {
 }
 
 /* Sidebar */
+.sidebar {
+  position: sticky;
+  top: 110px;   /* header height offset */
+  height: fit-content;
+}
+
 .sidebar-links li {
   display: flex;
   align-items: center;
