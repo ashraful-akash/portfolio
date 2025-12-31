@@ -451,50 +451,40 @@ a:hover {
 @media (max-width: 768px) {
 
   .top-nav {
-    flex-direction: row;           /* KEEP ROW */
-    justify-content: space-between;/* LEFT + RIGHT */
+    display: flex;
+    flex-direction: row;              /* keep in one row */
+    justify-content: space-between;   /* left + right */
     align-items: center;
-    padding: 12px 16px;            /* edge spacing */
+    padding: 12px 16px;
   }
 
   .nav-name {
     font-size: 1.2rem;
+    font-weight: 600;
     white-space: nowrap;
   }
-  
+
   .menu-toggle {
     display: block;
-    font-size: 1.5rem;
     background: none;
     border: none;
+    font-size: 1.5rem;
     cursor: pointer;
+    padding: 4px;
   }
- 
-  .menu-toggle:hover {
-  opacity: 0.7;
+  .menu-toggle:active {
+  transform: scale(0.95);
   }
-
-
+  /* Hide nav links by default on mobile */
   .nav-links {
     display: none;
-    flex-direction: column;
     width: 100%;
-    background: #fff;
-    border-top: 1px solid #e5e7eb;
-    padding: 10px 0;
+    flex-direction: column;
+    margin-top: 10px;
   }
 
   .nav-links.show {
     display: flex;
   }
-
-  .nav-btn {
-    padding: 10px 0;
-    font-size: 1rem;
-  }
-
-  .nav-btn.active::after {
-    display: none; /* no underline in dropdown */
-  }
-  
 }
+
