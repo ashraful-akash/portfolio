@@ -138,6 +138,11 @@ html {
   margin: 0;
   text-align: left;
 }
+.sidebar-links i {
+  width: 20px;
+  text-align: center;
+  color: #111827;
+}
 
 .sidebar-links li {
   display: flex;
