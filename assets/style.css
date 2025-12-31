@@ -196,6 +196,36 @@ html {
   border-bottom: 2px solid #2563eb;
   font-weight: 600;
 }
+.education {
+  margin-top: 30px;
+}
 
+.edu-item h3 {
+  margin-bottom: 5px;
+}
+
+.edu-institute {
+  color: #555;
+  font-style: italic;
+  margin-bottom: 8px;
+}
+
+.edu-gpa {
+  margin-bottom: 10px;
+}
+
+.highlight {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.edu-points {
+  padding-left: 18px;
+  margin-top: 10px;
+}
+
+.edu-points li {
+  margin-bottom: 6px;
+}
   
 }
