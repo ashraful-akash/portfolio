@@ -85,7 +85,17 @@ body {
 .content {
   padding: 10px 0;
 }
+.content a {
+  color: #2563eb;
+  font-size: 0.9rem;
+}
 
+.content a:hover {
+  text-decoration: underline;
+}
+.section > h2 {
+  margin-bottom: 24px;
+}
 section {
   margin-bottom: 60px;
 }
@@ -139,6 +149,12 @@ html {
   scroll-behavior: smooth;
 }
 
+.pub-title {
+  font-size: 1.15rem;   /* MATCH PROJECTS */
+  font-weight: 600;
+  color: #111827;
+}
+
 /* ===== PROJECTS ===== */
 .project-item {
   margin-bottom: 40px;
@@ -179,7 +195,9 @@ html {
   padding-left: 20px;
   margin-top: 15px;
 }
-
+.exp-item {
+  margin-bottom: 40px; /* same as project-item */
+}
 #experience li,
 #awards li {
   margin-bottom: 10px;
@@ -188,6 +206,23 @@ html {
 }
 
 /* Nested list inside Awards (for Coursera courses) */
+
+.award-item {
+  margin-bottom: 40px;
+}
+
+.award-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 6px;
+}
+
+.award-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #374151;
+}
 #awards ul ul {
   margin-top: 6px;
   padding-left: 20px;
