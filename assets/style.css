@@ -235,6 +235,19 @@ html {
   font-size: 0.9rem;
   color: #2563eb;
 }
+/* Certificate / award links */
+.award-links a,
+.award-list a {
+  font-size: 0.9rem;
+  color: #2563eb;
+  margin-left: 6px;
+}
+
+.award-links a:hover,
+.award-list a:hover {
+  text-decoration: underline;
+}
+
 /* Mobile */
 @media (max-width: 900px) {
   .container {
