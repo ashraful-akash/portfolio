@@ -12,22 +12,20 @@
 <!-- TOP NAVIGATION -->
 <header class="top-nav">
   <div class="nav-name">Ashraful</div>
- <nav class="nav-links">
-     <button class="nav-btn active"
-  onclick="navigate('home', this)">Home</button>
 
-<button class="nav-btn"
-  onclick="navigate('publications', this)">Publications</button>
+  <!-- Hamburger (mobile only) -->
+  <button class="menu-toggle" onclick="toggleMenu()">
+    <i class="fa-solid fa-bars"></i>
+  </button>
 
-<button class="nav-btn"
-  onclick="navigate('projects', this)">Projects</button>
-
-<button class="nav-btn"
-  onclick="navigate('experience', this)">Experience</button>
-
-<button class="nav-btn"
-  onclick="navigate('awards', this)">Awards & Certificates</button>
-</nav>
+  <!-- Navigation -->
+  <nav class="nav-links" id="mobileMenu">
+    <button class="nav-btn active" onclick="navigate('home', this)">Home</button>
+    <button class="nav-btn" onclick="navigate('publications', this)">Publications</button>
+    <button class="nav-btn" onclick="navigate('projects', this)">Projects</button>
+    <button class="nav-btn" onclick="navigate('experience', this)">Experience</button>
+    <button class="nav-btn" onclick="navigate('awards', this)">Awards & Certificates</button>
+  </nav>
 </header>
 
 <div class="container">
