@@ -13,16 +13,20 @@
 <header class="top-nav">
   <div class="nav-name">Md Ashraful Hossen Akash</div>
  <nav class="nav-links">
-      <button class="nav-btn active"
-       onclick="showSection('home', this)">Home</button>
+     <button class="nav-btn active"
+  onclick="navigate('home', this)">Home</button>
 
-      <button class="nav-btn"onclick="showSection('publications', this)">Publications</button>
+<button class="nav-btn"
+  onclick="navigate('publications', this)">Publications</button>
 
-      <button class="nav-btn"onclick="showSection('projects', this)">Projects</button>
+<button class="nav-btn"
+  onclick="navigate('projects', this)">Projects</button>
 
-      <button class="nav-btn"onclick="showSection('experience', this)">Experience</button>
+<button class="nav-btn"
+  onclick="navigate('experience', this)">Experience</button>
 
-      <button class="nav-btn"onclick="showSection('awards', this)">Awards & Certificates</button>
+<button class="nav-btn"
+  onclick="navigate('awards', this)">Awards & Certificates</button>
 </nav>
 </header>
 
@@ -192,19 +196,44 @@
 
 <!-- SCRIPT AT THE END (BEST PRACTICE) -->
 <script>
-  function showSection(sectionId, btn) {
-    // Toggle content
+  function showSection(sectionId) {
+    // Show correct section
     document.querySelectorAll('.section').forEach(sec =>
       sec.classList.remove('active')
     );
-    document.getElementById(sectionId).classList.add('active');
+    const section = document.getElementById(sectionId);
+    if (section) section.classList.add('active');
 
-    // Toggle nav buttons
-    document.querySelectorAll('.nav-btn').forEach(b =>
-      b.classList.remove('active')
+    // Highlight nav button
+    document.querySelectorAll('.nav-btn').forEach(btn =>
+      btn.classList.remove('active')
     );
-    btn.classList.add('active');
+    const activeBtn = document.querySelector(
+      `.nav-btn[onclick*="${sectionId}"]`
+    );
+    if (activeBtn) activeBtn.classList.add('active');
   }
+
+  function navigate(sectionId, btn) {
+    window.location.hash = sectionId;
+    showSection(sectionId);
+  }
+
+  // Load section from URL hash on page load
+  window.addEventListener('load', () => {
+    const hash = window.location.hash.replace('#', '');
+    if (hash) {
+      showSection(hash);
+    } else {
+      showSection('home');
+    }
+  });
+
+  // Handle browser back / forward
+  window.addEventListener('hashchange', () => {
+    const hash = window.location.hash.replace('#', '');
+    if (hash) showSection(hash);
+  });
 </script>
 
 
