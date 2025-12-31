@@ -212,7 +212,29 @@ html {
 #experience a:hover {
   text-decoration: underline;
 }
+/* ===== EXPERIENCE (PROJECT STYLE) ===== */
+.exp-item {
+  margin-bottom: 40px;
+}
 
+.exp-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 6px;
+}
+
+.exp-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #374151;
+  margin-bottom: 6px;
+}
+
+.exp-links a {
+  font-size: 0.9rem;
+  color: #2563eb;
+}
 /* Mobile */
 @media (max-width: 900px) {
   .container {
