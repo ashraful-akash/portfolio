@@ -466,7 +466,20 @@ a:hover {
     font-size: 1.5rem;
     cursor: pointer;
   }
+/* SHOW hamburger on mobile */
+  .menu-toggle {
+    display: block;
+  }
 
+  /* HIDE desktop nav buttons initially */
+  .nav-links {
+    display: none;
+  }
+
+  /* Show nav when toggled */
+  .nav-links.show {
+    display: flex;
+  }
   /* MOBILE MENU OVERLAY */
   .nav-links {
     position: absolute;
