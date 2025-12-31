@@ -204,7 +204,14 @@ html {
   color: #111827;
 }
 
+#experience a {
+  font-size: 0.9rem;
+  color: #2563eb;
+}
 
+#experience a:hover {
+  text-decoration: underline;
+}
 
 /* Mobile */
 @media (max-width: 900px) {
