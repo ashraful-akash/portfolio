@@ -54,7 +54,14 @@ body {
   margin: 10px 0;
   font-size: 0.95rem;
 }
+.sidebar a {
+  color: #111827;      /* dark neutral */
+  text-decoration: none;
+}
 
+.sidebar a:hover {
+  text-decoration: underline;
+}
 .sidebar-links i {
   width: 18px;
   text-align: center;
