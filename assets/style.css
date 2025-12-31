@@ -78,7 +78,7 @@ body {
 }
 
 .contact li {
-  margin: 8px 0;
+margin: 8px 0;
 }
 
 /* Content */
@@ -89,20 +89,34 @@ body {
   color: #2563eb;
   font-size: 0.9rem;
 }
-
+.content p,
+.content li {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #374151;
+}
 .content a:hover {
   text-decoration: underline;
 }
 .section > h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
   margin-bottom: 24px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #e5e7eb;
+  color: #111827;
 }
 section {
   margin-bottom: 60px;
 }
 
 h2 {
-  border-bottom: 1px solid #ddd;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 24px;
   padding-bottom: 6px;
+  border-bottom: 1px solid #e5e7eb;
+  color: #111827;
 }
 
 /* ===== NAV BUTTONS (UNIFIED STYLE) ===== */
@@ -162,8 +176,8 @@ html {
 .project-title {
   font-size: 1.15rem;
   font-weight: 600;
-  margin-bottom: 6px;
   color: #111827;
+  margin-bottom: 6px;
 }
 
 .project-desc {
@@ -270,6 +284,14 @@ html {
 .award-list a:hover {
   text-decoration: underline;
 }
+strong {
+  font-weight: 600;
+}
+
+
+
+
+
 
 /* Mobile */
 @media (max-width: 900px) {
@@ -403,14 +425,6 @@ html {
 
 .edu-points li {
   margin-bottom: 6px;
-}
-.content a {
-  color: #2563eb;
-  font-size: 0.9rem;
-}
-
-.content a:hover {
-  text-decoration: underline;
 }
 
 .sidebar a {
