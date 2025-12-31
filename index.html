@@ -20,11 +20,15 @@
 
   <!-- Navigation -->
   <nav class="nav-links" id="mobileMenu">
-    <button class="nav-btn active" onclick="navigate('home', this)">Home</button>
-    <button class="nav-btn" onclick="navigate('publications', this)">Publications</button>
-    <button class="nav-btn" onclick="navigate('projects', this)">Projects</button>
-    <button class="nav-btn" onclick="navigate('experience', this)">Experience</button>
-    <button class="nav-btn" onclick="navigate('awards', this)">Awards & Certificates</button>
+    <button class="nav-btn" data-target="home" onclick="showSection('home')">Home</button>
+
+    <button class="nav-btn" data-target="publications" onclick="showSection('publications')">Publications</button>
+    
+    <button class="nav-btn" data-target="projects" onclick="showSection('projects')">Projects</button>
+    
+    <button class="nav-btn" data-target="experience" onclick="showSection('experience')">Experience</button>
+
+    <button class="nav-btn" data-target="awards" onclick="showSection('awards')">Awards & Certificates</button>
   </nav>
 </header>
 
@@ -417,6 +421,7 @@
     document.querySelectorAll('.section').forEach(sec =>
       sec.classList.remove('active')
     );
+
     const section = document.getElementById(sectionId);
     if (section) section.classList.add('active');
 
@@ -424,33 +429,16 @@
     document.querySelectorAll('.nav-btn').forEach(btn =>
       btn.classList.remove('active')
     );
-    const activeBtn = document.querySelector(
-      `.nav-btn[onclick*="${sectionId}"]`
-    );
-    if (activeBtn) activeBtn.classList.add('active');
+
+    document
+      .querySelector(`.nav-btn[data-target="${sectionId}"]`)
+      ?.classList.add('active');
+
+    // FORCE page to stay at top (prevents jump)
+    window.scrollTo({ top: 0, behavior: 'instant' });
   }
-
-  function navigate(sectionId, btn) {
-    window.location.hash = sectionId;
-    showSection(sectionId);
-  }
-
-  // Load section from URL hash on page load
-  window.addEventListener('load', () => {
-    const hash = window.location.hash.replace('#', '');
-    if (hash) {
-      showSection(hash);
-    } else {
-      showSection('home');
-    }
-  });
-
-  // Handle browser back / forward
-  window.addEventListener('hashchange', () => {
-    const hash = window.location.hash.replace('#', '');
-    if (hash) showSection(hash);
-  });
 </script>
+
 
 
 </body>
