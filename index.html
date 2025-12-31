@@ -12,19 +12,22 @@
 <!-- TOP NAVIGATION -->
 <header class="top-nav">
   <div class="nav-name">Md Ashraful Hossen Akash</div>
-  <nav>
-    <button type="button" class="nav-btn active" onclick="showSection('home')">Home</button>
-    
-    <button type="button" class="nav-btn active" onclick="showSection('publications')">Publications</button>
-    
-    <button type="button" class="nav-btn active" onclick="showSection('projects')">Projects</button>
+ <nav class="nav-links">
+  <button class="nav-btn active"
+    onclick="showSection('home'); this.classList.add('active')">Home</button>
 
-    <button type="button" class="nav-btn active" onclick="showSection('experience')">Experience</button>
+  <button class="nav-btn"
+    onclick="showSection('publications'); this.classList.add('active')">Publications</button>
 
-    <button type="button" class="nav-btn active" onclick="showSection('awards')">Awards & Certificates</button>
+  <button class="nav-btn"
+    onclick="showSection('projects'); this.classList.add('active')">Projects</button>
 
+  <button class="nav-btn"
+    onclick="showSection('experience'); this.classList.add('active')">Experience</button>
 
-  </nav>
+  <button class="nav-btn"
+    onclick="showSection('awards'); this.classList.add('active')">Awards & Certificates</button>
+</nav>
 </header>
 
 <div class="container">
