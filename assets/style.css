@@ -29,10 +29,10 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 40px 30px;   /* ADD THIS */
+  padding: 30px 20px;   /* ADD THIS */
   display: grid;
   grid-template-columns: 280px 1fr; /* slightly wider sidebar */
-  gap: 40px;
+  gap: 24px;
 }
 
 /* Sidebar */
@@ -83,7 +83,7 @@ body {
 
 /* Content */
 .content {
-  padding: 40px;
+  padding: 10px 0;
 }
 
 section {
